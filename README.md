@@ -1,4 +1,4 @@
-# Ejercicio1
+# Ejercicio 1
 
 Entradas/salidas digitales 
 
