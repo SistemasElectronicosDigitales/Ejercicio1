@@ -1,18 +1,26 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#define led 2
+#define switch_On 3
+#define switch_Off 4
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  pinMode(switch_On, INPUT);
+  pinMode(switch_Off, INPUT);
+  pinMode(led, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+  if(digitalRead (switch_On) == HIGH){
+    digitalWrite(led,HIGH);
+    delay(250);
+  }
+
+  if(digitalRead (switch_Off) == LOW){
+    digitalWrite(led,LOW);
+    delay(250);
+  }
+  
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
